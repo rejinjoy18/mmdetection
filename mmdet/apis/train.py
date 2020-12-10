@@ -67,7 +67,6 @@ def train_detector(model,
             dist=distributed,
             seed=cfg.seed) for ds in dataset
     ]
-
     # put model on gpus
     if distributed:
         find_unused_parameters = cfg.get('find_unused_parameters', False)
